@@ -70,14 +70,7 @@ class ExcelProcessor:
             return
         
         # Define known table patterns for capital budgeting files
-        table_patterns = {
-            "INITIAL INVESTMENT": ["Initial Investment=", "Opportunity cost", "Lifetime of the investment", "Salvage Value at end of project=", "Deprec. method", "Tax Credit (if any )=", "Other invest.(non-depreciable)="],
-            "DISCOUNT RATE": ["Discount rate", "Beta", "Riskless rate", "Market risk premium", "Debt Ratio =", "Cost of Borrowing ="],
-            "WORKING CAPITAL": ["Initial Investment in Work. Cap=", "Working Capital as % of Rev=", "Salvageable fraction at end="],
-            "GROWTH RATES": ["Revenues", "Fixed Expenses"],
-            "CASHFLOW DETAILS": ["Revenues in  year 1=", "Var. Expenses as % of Rev=", "Fixed expenses in year 1=", "Tax rate on net income="],
-            
-        }
+        table_patterns = self.raw_data
         
         # Find sections based on key indicators
         for table_name, keywords in table_patterns.items():
